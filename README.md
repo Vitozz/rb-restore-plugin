@@ -1,3 +1,5 @@
+Rhythmbox playback resotre plugin
+
 Restores last playing track on start of Rhythmbox (>=2.95).
 
 To install plugin manually do the next steps:

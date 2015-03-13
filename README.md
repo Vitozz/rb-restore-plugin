@@ -1,4 +1,4 @@
-Rhythmbox playback resotre plugin
+<b>Rhythmbox playback resotre plugin</b>
 
 Restores last playing track on start of Rhythmbox (>=2.95).
 

@@ -1,0 +1,15 @@
+[Plugin]
+Loader=python
+Module=restore
+IAge=2
+Name=Restore Rhythmbox
+Name[de]=Rhythmbox wiederherstellen
+Name[ru]=Восстановление Rhythmbox
+Name[ua]=Відновлення Rhythmbox
+Description=Restores the played item on starting Rhythmbox
+Description[ru]=Восстанавливает последний воспроизводимый трек при запуске Rhythmbox
+Description[ua]=Відновлює останню композицію, що програвалась, коли стартує Rhythmbox
+Authors=Vitaly Tonkacheyev <thetvg@gmail.com>
+Copyright=Copyright © 2010 Vitaly Tonkacheyev
+Website=http://sites.google.com/site/thesomeprojects/
+

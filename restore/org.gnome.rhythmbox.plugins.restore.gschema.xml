@@ -1,0 +1,34 @@
+<schemalist>
+
+  <schema id="org.gnome.rhythmbox.plugins.restore" path="/org/gnome/rhythmbox/plugins/restore/">
+    <key name="entry" type="s">
+      <default>''</default>
+      <summary>Path of the Rhythmbox Enrty </summary>
+      <description>
+      Contains the Rhythmbox entry path
+      </description>
+    </key>
+    <key name="position" type="i">
+      <default>0</default>
+      <summary>Player position</summary>
+      <description>
+	Position in ms of saved entry
+      </description>
+    </key>
+    <key name="isplay" type="b">
+      <default>false</default>
+      <summary>Is Play Saved Entry</summary>
+      <description>
+	Not starts playing entry at startup
+      </description>
+    </key>
+    <key name="isplaypos" type="b">
+      <default>false</default>
+      <summary>Is Play Saved Position</summary>
+      <description>
+	Starts playing entry at the saved position 
+      </description>
+    </key>
+  </schema>
+
+</schemalist>

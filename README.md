@@ -8,8 +8,8 @@ To install plugin manually do the next steps:
 
 ```bash
 cd $HOME
-tar -xzf rb-restore-plugin_{version}.tar.gz
-cp -r $HOME/restore $HOME/.local/share/rhythmbox/plugins/
+git clone https://github.com/Vitozz/rb-restore-plugin.git
+cp -r $HOME/rb-restore-plugin/restore $HOME/.local/share/rhythmbox/plugins/
 cd $HOME/.local/share/rhythmbox/plugins/restore
 ```
 

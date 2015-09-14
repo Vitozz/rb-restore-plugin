@@ -57,7 +57,7 @@ class restorePlugin (GObject.Object, Peas.Activatable):
     def do_deactivate(self):
         """Function runs when plugin deactivated"""
         if self.work.isAlive:
-            self.work._Thread__stop()
+            #self.work._Thread__stop()
             self.work.join(0)
             del self.work
         for event in self.events:

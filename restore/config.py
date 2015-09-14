@@ -7,6 +7,27 @@ SETTINGS_KEY="org.gnome.rhythmbox.plugins.restore"
 ISPLAY_KEY="isplay"
 ISPOS_KEY="isplaypos"
 
+class loadResFile:
+    def __init__(self):
+        pass
+
+    def get(self, project, fname):
+        cwd = str(os.getcwd())
+        plist = (cwd,cwd[:-len(project)],"/usr/lib", "/usr/local/lib", str(os.environ['HOME']) + "/.local/share")
+        for path in plist:
+            if path:
+                try:
+                    tmp_path=""
+                    if cwd in path:
+                        tmp_path = os.path.join(path, fname)
+                    else:
+                        tmp_path = os.path.join(path, project, fname)
+                    if os.path.exists(tmp_path):
+                        return str(tmp_path)
+                except Exception as error:
+                    os.sys.stderr.write("Error when getting path %s" %error)
+        return ""
+
 class RestoreConfigureDialog (GObject.Object, PeasGtk.Configurable):
     """This class is responsible for the appearance of the Preferences dialog"""
     __gtype_name__ = 'RestoreConfigureDialog'
@@ -68,6 +89,9 @@ class RestoreConfigureDialog (GObject.Object, PeasGtk.Configurable):
         path = os.path.join(data_dir, filename)
         if os.path.exists(path):
             return path
+        else:
+            loader = loadResFile()
+            return loader.get("rhythmbox/plugins/restore", filename)
         return RB.file(filename)
 
     
